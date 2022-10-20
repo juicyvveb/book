@@ -1,0 +1,19 @@
+@import '../../style/vars.scss';
+.block {
+  background-color: rgb(255, 236, 153);
+  color: black;
+  padding: 3%;
+  ul{
+    list-style: none;
+    li{
+      margin-bottom: 5px;
+      &.completed{
+        background-color: $green;
+      }
+      &.nocompleted{
+        background-color: $red;
+      }
+    }
+  }
+}
+
