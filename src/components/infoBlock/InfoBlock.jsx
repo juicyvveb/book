@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import fetch from "../../api/fetch";
 import s from './InfoBlock.module.scss';
+import Indicator from "../info-item/todo-indicator/Indicator";
+
 const url = 'https://jsonplaceholder.typicode.com';
 
 export async function loader({ request, params }) {
@@ -19,8 +21,9 @@ function Block() {
     setType(loaded.type)
   }, [loaded])
 
-  console.log(data)
-
+  // className={el.completed != undefined ?
+  //   el.completed ? s.completed : s.nocompleted
+  //   : null}
   return (
     <div className={s.block}>
       <h1>{type}</h1>
@@ -29,13 +32,12 @@ function Block() {
           data.map(el => (
             <li
               key={el.id}
-              className={el.completed != undefined ? 
-              el.completed ? s.completed : s.nocompleted 
-              : null}>
+              >
               <Link to={`${el.id}`} >
                 подробнее
               </Link>
               {el.title}
+              {el.completed != undefined && <Indicator completed={el.completed}/>}
             </li>
           ))
         }

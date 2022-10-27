@@ -1,0 +1,41 @@
+.item {
+  border: 2px solid black;
+  color: rgb(138, 255, 102);
+  &--todos{
+    background-color: rgb(250, 104, 238);
+    position: relative;
+    // &:after{
+    //   content: '';
+    //   width: 20px;
+    //   height: 20px;
+    //   border: 2px solid black;
+    //   position: absolute;
+    //   right: 0;
+    //   top: 0;
+    //   box-shadow: 1px 1px 1px 0.3px black;
+    // }
+    // &__completed{
+    //   &:after{
+    //     background-color: green;
+    //   }
+    // }
+    // &__uncompleted{
+    //   &:after{
+    //     background-color: red;
+    //   }
+    // }
+  }
+  &--albums{
+    background-color: rgb(255, 230, 0);
+  }
+  &--posts{
+    background-color: rgb(255, 17, 0);
+  }
+}
+
+
+.title {
+  color: black;
+  text-decoration: underline;
+}
+

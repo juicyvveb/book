@@ -1,0 +1,15 @@
+.indicator{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 2px solid black;
+  &__completed{
+    background: green;
+  }
+  &__uncompleted{
+    background: rgb(231, 70, 22);
+  }
+}
