@@ -4,7 +4,6 @@ import './style/main.scss';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
 } from "react-router-dom";
 import { Root } from './routes/Root';
 import ErrorPage from "./error-page";

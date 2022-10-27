@@ -6,9 +6,8 @@ export default ({completed}) => {
   const styleClass = function () {
     return completed ? 'completed' : 'uncompleted'
   }
-  console.log(s.indicator[`__${styleClass()}`])
-  let className = `${s.indicator}`
-  styleClass()
+
+  let className = `${s.indicator} ${s[`indicator__${styleClass()}`]}`
 
   return (
     <div className={className}>

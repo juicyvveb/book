@@ -1,7 +1,6 @@
 import React from "react";
-import { useLoaderData, useNavigation } from "react-router";
+import { useLoaderData } from "react-router";
 import fetch from "../../api/fetch";
-import s from './PhotoAlbum.module.scss'
 
 export async function loader({ params }) {
   // throw('SOME PROPNA')

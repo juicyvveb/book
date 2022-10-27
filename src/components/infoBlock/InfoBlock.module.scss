@@ -8,6 +8,8 @@
     li{
       margin-bottom: 5px;
       position: relative;
+      padding-left: 7%;
+      border: 1px solid black;
       &.completed{
         background-color: $green;
       }

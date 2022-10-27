@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import getAlbums from "../../api/fetch";
-import { Link, useActionData, NavLink, useNavigate } from "react-router-dom";
+import { useActionData, NavLink, useNavigate } from "react-router-dom";
 import s from './UsersList.module.scss';
 
 export async function removeUser({ request, params }) {
   return params
 }
+
+
 
 export default ({ list }) => {
   const data = useActionData();
@@ -15,7 +16,7 @@ export default ({ list }) => {
   useEffect(() => {
     if (data?.userId) {
       let id = data.userId;
-      let person = [...list].filter(person => person.id == id)[0]
+      let person = [...list].filter(person => person.id === id)[0]
       list.splice(list.indexOf(person), 1);
       setUsers([...list]);
       navigate(("/"))

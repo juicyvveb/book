@@ -37,7 +37,7 @@ function Block() {
                 подробнее
               </Link>
               {el.title}
-              {el.completed != undefined && <Indicator completed={el.completed}/>}
+              {el.completed !== undefined && <Indicator completed={el.completed}/>}
             </li>
           ))
         }

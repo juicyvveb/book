@@ -16,15 +16,6 @@ export default () => {
   console.log(data)
   let className = `${s.item} ${s[`item--${type}`]}`;
 
-  const styleClass = function () {
-    if (data?.completed !== undefined && data.completed) {
-      className += ` ${s['item--todos__completed']}`
-    } else if (data?.completed !== undefined && !data.completed) {
-      className += ` ${s['item--todos__uncompleted']}`
-    }
-  }
-  // styleClass()
-
   return (
     <div className={className}>
       <h3 className={s.title}>{title}  номер: {id}</h3>
@@ -34,11 +25,11 @@ export default () => {
 
       {/* link for album */}
       {
-        type == "albums" && <Link to="photos">смотреть фото</Link>
+        type === "albums" && <Link to="photos">смотреть фото</Link>
       }
 
       {
-        type == 'todos' && <Indicator completed={data.completed}/>
+        type === 'todos' && <Indicator completed={data.completed}/>
       }
     </div>
   )
