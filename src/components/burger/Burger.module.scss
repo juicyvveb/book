@@ -1,6 +1,25 @@
-.burger{
+.burger {
     position: fixed;
+    width: 5%;
+    // display: inline;
+    // float: right;
+    order: 2;
     top: 5%;
-    left: 5%;
+    right: 95%;
     background-color: yellow;
+    z-index: 15;
+    height: fit-content;
+    button {
+        background-color: red;
+    }
+
+    &__innerSidebar {
+        width: 10%;
+        position: relative;
+        // display: inline;
+        float: right;
+        button {
+            background-color: rgb(250, 250, 119);
+        }
+    }
 }
