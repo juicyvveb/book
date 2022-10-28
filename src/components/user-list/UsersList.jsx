@@ -8,7 +8,7 @@ export async function removeUser({ request, params }) {
 
 
 
-export default ({ list }) => {
+export default ({ list, closeBurger}) => {
   const data = useActionData();
   const navigate = useNavigate();
   const [users, setUsers] = useState([])
@@ -26,27 +26,30 @@ export default ({ list }) => {
     }
   }, [list, data])
 
-  return (
-    <div>
-      <div className={s.list}>
-        <h1>Users</h1>
-        <ul>
-          {users.map(el =>
-            <li key={el.id} className={s.item}>
-              <NavLink 
-              to={`users/${el.id}`}
-              className={({isActive,isPending}) => 
-                isActive 
-                ? "active"
-                : isPending
-                ? "pending"
-                : ""
-              }
-              >{el.id}__{el.name}</NavLink>
-            </li>)}
-        </ul>
-      </div>
-    </div>
+  function close(e){
+    e.stopPagination()
+    closeBurger();
+  }
 
+  return (
+    <div className={s.list} onClick={(e) => { e.stopPropagation() }}>
+      <h1>Users</h1>
+      <ul>
+        {users.map(el =>
+          <li key={el.id} className={s.item}>
+            <NavLink
+              onClick={close}
+              to={`users/${el.id}`}
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "active"
+                  : isPending
+                    ? "pending"
+                    : ""
+              }
+            >{el.id}__{el.name}</NavLink>
+          </li>)}
+      </ul>
+    </div>
   )
 }

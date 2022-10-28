@@ -1,9 +1,10 @@
 import React from "react";
 import s from './Burger.module.scss';
 
-export default ({clickBurger, children}) => {
+export default ({clickBurger, children, className}) => {
+    const classStyle = className || null
     return (
-        <div className={s.burger}>
+        <div className={`${s.burger} ${s[`burger${classStyle}`]}`}>
             <button 
             type="button"
             onClick={clickBurger}
