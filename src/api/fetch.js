@@ -7,9 +7,7 @@ async function fetch(url, params) {
     });
     return response
   } catch (error) {
-    // return [[], error.message]
-    // throw(error.message)
-    return error
+    throw(error)
   }
 }
 export default fetch

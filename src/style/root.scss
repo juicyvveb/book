@@ -4,18 +4,26 @@
   display: flex;
 
   #sidebar {
-    flex-grow: .7;
-    // position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     // transition: all .2s ease;
-    width: 100%;
+    width: fit-content;
     height: 100%;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.2);
+    // background-color: rgba(0, 0, 0, 0.2);
     button{
       color: blue;
+    }
+
+    & > div {
+      width: 50vw;
+    }
+    .sidebar-block{
+      flex-grow: 2;
+      // opacity: 0;
+      background-color: rgb(240, 240, 200);
     }
   }
 

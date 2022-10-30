@@ -21,9 +21,6 @@ function Block() {
     setType(loaded.type)
   }, [loaded])
 
-  // className={el.completed != undefined ?
-  //   el.completed ? s.completed : s.nocompleted
-  //   : null}
   return (
     <div className={s.block}>
       <h1>{type}</h1>

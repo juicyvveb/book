@@ -4,6 +4,7 @@ import './style/main.scss';
 import {
   createBrowserRouter,
   RouterProvider,
+  useOutlet,
 } from "react-router-dom";
 import { Root, loader as listLoader } from './routes/Root';
 import ErrorPage from "./error-page";
@@ -56,6 +57,7 @@ const router = createBrowserRouter([
         element: <h1>removing</h1>,
         action: removeUser,
       },
+      
     ]
   }
 ])
