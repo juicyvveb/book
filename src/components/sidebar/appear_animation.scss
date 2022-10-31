@@ -1,0 +1,25 @@
+.my-node-enter {
+  opacity: 0;
+}
+
+.my-node-enter-done {
+  &#sidebar {
+    pointer-events: initial;
+    transform: translateX(0);
+  }
+}
+
+.my-node-exit-done {
+  &#sidebar {
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: $desktop) {
+  .my-node-exit-done {
+    &#sidebar {
+      transform: translateX(-20%);
+    }
+  }
+}
