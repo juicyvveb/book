@@ -6,13 +6,7 @@ export async function removeUser({ request, params}) {
   return params
 }
 
-<<<<<<< HEAD
-
-
-export default ({ list, closeBurger}) => {
-=======
 export default ({ list, closeBurger, children }) => {
->>>>>>> upstream/main
   const data = useActionData();
   const navigate = useNavigate();
   const [users, setUsers] = useState(list)
@@ -31,33 +25,20 @@ export default ({ list, closeBurger, children }) => {
     }
   }, [list, data])
 
-<<<<<<< HEAD
-  function close(e){
-    e.stopPagination()
-=======
   function close(e) {
     e.stopPropagation()
->>>>>>> upstream/main
     closeBurger();
   }
 
   return (
-<<<<<<< HEAD
-    <div className={s.list} onClick={(e) => { e.stopPropagation() }}>
-=======
     <div className={`${s.list} list`} onClick={(e) => { e.stopPropagation() }}>
->>>>>>> upstream/main
       <h1>Users</h1>
       <ul>
         {users.map(el =>
           <li key={el.id} className={s.item}>
             <NavLink
               onClick={close}
-<<<<<<< HEAD
-              to={`users/${el.id}`}
-=======
               to={`/users/${el.id}`}
->>>>>>> upstream/main
               className={({ isActive, isPending }) =>
                 isActive
                   ? "active"
@@ -67,13 +48,10 @@ export default ({ list, closeBurger, children }) => {
               }
             >{el.id}__{el.name}</NavLink>
           </li>)}
-      </ul>
-<<<<<<< HEAD
-=======
+          </ul>
       <>
         {children}
       </>
->>>>>>> upstream/main
     </div>
   )
 }

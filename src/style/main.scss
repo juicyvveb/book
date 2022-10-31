@@ -44,32 +44,6 @@ a.active {
 a.pending {
   color: rgb(160, 248, 100);
 }
-<<<<<<< HEAD
-.my-node-appear {
-  transform: translateX(-50%);
-}
-.my-node{
-  transition: all .3s ease-in-out;
-}
-.my-node-enter {
-  opacity: 0;
-  transform: translateX(-100px);
-}
-.my-node-enter-active {
-  opacity: 0;
-}
-.my-node-exit {
-  opacity: 1;
-  transform: translateX(-100px);
-}
-.my-node-exit-done{
-  transform: translateX(-50%);
-  visibility: hidden;
-}
-.my-node-exit-active {
-  opacity: 0;
-}
-=======
 
 #sidebar {
   transition: all .3s ease-in-out;
@@ -120,4 +94,3 @@ a.pending {
     }
   }
 }
->>>>>>> upstream/main
