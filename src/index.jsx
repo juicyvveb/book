@@ -4,8 +4,9 @@ import './style/main.scss';
 import {
   createBrowserRouter,
   RouterProvider,
+  useOutlet,
 } from "react-router-dom";
-import { Root } from './routes/Root';
+import { Root, loader as listLoader } from './routes/Root';
 import ErrorPage from "./error-page";
 import Index from './routes/Index';
 import User, { loader as loadUser } from './components/user/User';
@@ -17,8 +18,9 @@ import PhotoAlbum, {loader as PhotoLoader} from './components/photo-album/PhotoA
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Root/>,
     errorElement: <ErrorPage/>,
+    loader: listLoader,
     children: [
       { index: true, element: <Index /> },
       {
@@ -55,6 +57,7 @@ const router = createBrowserRouter([
         element: <h1>removing</h1>,
         action: removeUser,
       },
+      
     ]
   }
 ])

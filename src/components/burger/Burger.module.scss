@@ -1,6 +1,69 @@
-.burger{
-    position: fixed;
+@import '../../style/main.scss';
+.burger {
+    width: 6vw;
+    height: 6vw;
+    order: 2;
+    pointer-events: visible;
+    position: absolute;
+    right: 0;
     top: 5%;
-    left: 5%;
-    background-color: yellow;
+    transform: translateX(100%);
+    border: 2px solid black;
+    padding: 0.3%;
+    background-color: $bgSidebar;
+
+    &-button {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        span,
+        &:before,
+        &:after {
+            content: "";
+            background-color: $linkColor;
+            width: 90%;
+            height: 11%;
+            transition: all .3s ease-in-out;
+            border-radius: 15px;
+        }
+        &:before {
+            transform: translateY(-100%);
+        }
+        &:after {
+            transform: translateY(100%);
+        }
+    }
+
+    &__open {
+        .burger-button {
+            span {
+                transform: rotate(270deg);
+                opacity: 0;
+            }
+
+            &:before {
+                transform: translateY(100%) rotate(45deg);
+            }
+
+            &:after {
+                transform: translateY(-100%) rotate(-45deg);
+            }
+        }
+
+    }
+}
+
+@media (min-width: $desktop) {
+    .burger {
+        cursor: pointer;
+        width: 2.5vw;
+        height: 2.5vw;
+        transition: all .1s ease-in-out;
+        &:hover{
+            padding: 1%;
+        }
+    }
 }
