@@ -12,27 +12,28 @@ export async function loader({ params }) {
 
 export default () => {
   const types = ['albums', 'posts', 'todos']
-  const user = useLoaderData()
+  const user = useLoaderData();
+
   return (
     <div className={s.user}>
       <h1>{user.name}_{user.id}</h1>
-      <Form method="post" action="remove" style={{float: 'right'}}>
+      <Form method="post" action="remove" style={{ float: 'right' }}>
         <button> remove </button>
       </Form>
       <ul>
         {
           types.map(type => (
             <li key={type}>
-              <NavLink 
+              <NavLink
                 to={`/users/${user.id}/${type}`}
-                className={({isActive, isPending}) => 
-                  isActive 
-                  ? "active" 
-                  : isPending 
-                  ? "pending" 
-                  : ""
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "active"
+                    : isPending
+                      ? "pending"
+                      : ""
                 }
-                >
+              >
                 {type}
               </NavLink>
             </li>

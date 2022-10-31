@@ -1,14 +1,8 @@
-
 import { Outlet, useLoaderData, useNavigation } from "react-router-dom"
 import React, { useState, useEffect } from "react";
 import fetch from "../api/fetch";
 import { Sidebar } from "../components/sidebar/Sidebar";
-
-export async function loader({ }) {
-  const url = 'https://jsonplaceholder.typicode.com/users';
-  return await fetch(url)
-}
-
+import { Loader } from "../components/loader/Loader";
 
 export async function loader({ }) {
   const url = 'https://jsonplaceholder.typicode.com/users';
@@ -26,11 +20,15 @@ export const Root = () => {
 
 
   return (
-
     <>
       <Sidebar list={list} />
-      <div id="detail" className={navigation.state === 'loading' ? 'loading' : ''}>
+      <div id="detail">
         <Outlet />
+        {
+          navigation.state === 'loading' 
+          ? <Loader/>
+          : null
+        }
       </div>
     </>
   )
