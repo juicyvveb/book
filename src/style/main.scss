@@ -16,6 +16,7 @@ body {
   line-height: 1.5;
   color: #121212;
 }
+
 textarea,
 input,
 button {
@@ -29,18 +30,21 @@ button {
   line-height: 1.5;
   margin: 0;
 }
+
 textarea:hover,
 input:hover,
 button:hover {
   box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
 }
 
-a.active{
+a.active {
   color: white;
 }
-a.pending{
+
+a.pending {
   color: rgb(160, 248, 100);
 }
+<<<<<<< HEAD
 .my-node-appear {
   transform: translateX(-50%);
 }
@@ -65,3 +69,55 @@ a.pending{
 .my-node-exit-active {
   opacity: 0;
 }
+=======
+
+#sidebar {
+  transition: all .3s ease-in-out;
+
+  transform: translateX(-50%);
+  .sidebar-block {
+    // display: none;
+    visibility: hidden;
+  }
+}
+
+.my-node-enter {
+  opacity: 0;
+  // transform: translateX(0);
+}
+
+.my-node-enter-done {
+  &#sidebar {
+    transform: translateX(0);
+    .sidebar-block {
+      display: block;
+    }
+  }
+}
+
+.my-node-enter-active {
+  opacity: 1;
+  // transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.my-node-exit {
+  opacity: 1;
+}
+
+.my-node-exit-active {
+  opacity: 0;
+  // transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.my-node-exit-done {
+  &#sidebar {
+    pointer-events: none;
+    transform: translateX(-50%);
+    .sidebar-block {
+      visibility: hidden;
+    }
+  }
+}
+>>>>>>> upstream/main
