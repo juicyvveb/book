@@ -1,0 +1,25 @@
+@import '../../style/main.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $bgSidebar;
+  height: 5%;
+  width: 100%;
+  padding: 2% 3%;
+  display: flex;
+  transition: all .3s ease-in-out;
+  &-link{
+    width: 10%;
+    aspect-ratio: 1 /1;
+    display: flex;
+    img{ 
+      max-width: 100%;
+    }
+  }
+
+  &__appear{
+    transform: translateY(-100%);
+  }
+}
