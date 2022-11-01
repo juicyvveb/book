@@ -1,9 +1,77 @@
-.list {
-  position: relative;
-  background-color: rgb(238, 82, 82);
-  width: 50%;
+@import '../../style/main.scss';
+
+
+.title{
+  color:$activeLink;
 }
 
-.item{
-  color: white;
+.list {
+  position: relative;
+  background-color: $bgSidebar;
+  width: 50%;
+  padding: 3%;
+  ul {
+    margin-top: 10%;
+    li {
+      width: 100%;
+      padding-left: 10%;
+      position: relative;
+      line-height: 1;
+      margin-bottom: 7%;
+    }
+  }
+}
+
+.link {
+  width: 100%;
+  display: block;
+  color: $linkColor;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6%;
+    aspect-ratio: 1/1;
+    background: linear-gradient(to top right, $bgSidebar 50%, $linkColor 50%);
+  }
+
+  &__active {
+    color: $activeLink;
+    font-weight: bold;
+    &:before {
+      background: linear-gradient(to top right, $bgSidebar 50%, $activeLink 50%);
+    }
+  }
+
+  &__pending {
+    color: $pendingLink;
+  }
+}
+
+.burger{
+  background-color: $bgSidebar;
+}
+
+@media (min-width: $desktop) {
+  .list {
+    width: 20%;
+    padding: 2%;
+    ul {
+      li {
+        width: 100%;
+        padding-left: 10%;
+        position: relative;
+        line-height: 1;
+        margin-bottom: 7%;
+      }
+    }
+  }
+  .link{
+    &:hover{
+     color: $pendingLink;
+    }
+  }
 }

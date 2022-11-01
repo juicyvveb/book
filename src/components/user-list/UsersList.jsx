@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useActionData, NavLink, useNavigate } from "react-router-dom";
 import s from './UsersList.module.scss';
 
-export async function removeUser({ request, params}) {
+
+export async function removeUser({ request, params }) {
   return params
 }
 
@@ -31,8 +32,8 @@ export default ({ list, closeBurger, children }) => {
   }
 
   return (
-    <div className={`${s.list} list`} onClick={(e) => { e.stopPropagation() }}>
-      <h1>Users</h1>
+    <div className={`${s.list}`} onClick={(e) => { e.stopPropagation() }}>
+      <h1 className={s.title}>Users</h1>
       <ul>
         {users.map(el =>
           <li key={el.id} className={s.item}>
@@ -41,10 +42,10 @@ export default ({ list, closeBurger, children }) => {
               to={`/users/${el.id}`}
               className={({ isActive, isPending }) =>
                 isActive
-                  ? "active"
+                  ? `${s.link} ${s['link__active']}`
                   : isPending
-                    ? "pending"
-                    : ""
+                    ? `${s.link} ${s['link__pending']}`
+                    : `${s.link}`
               }
             >{el.id}__{el.name}</NavLink>
           </li>)}
