@@ -1,0 +1,31 @@
+@import '../../style/main.scss';
+
+.user {
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+
+  // background: $activeLink;
+  &-name {
+    color: $bgSidebar;
+  }
+
+  &-infoList {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &--item {
+      margin-right: 5%;
+
+      a{
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+  &-link{
+    color: green;
+  }
+}

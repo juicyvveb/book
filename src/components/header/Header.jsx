@@ -1,7 +1,7 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import s from './Header.module.scss';
-
+import { Link as HeaderLink } from "../links/Link";
 import logo from '../../assets/img/kick.png';
 
 export const Header = () => {
@@ -11,9 +11,9 @@ export const Header = () => {
 
   document.addEventListener('scroll', () => {
     let currentScroll = window.pageYOffset;
-    if(currentScroll - prevScroll > 10 && headerRef.current){
+    if (currentScroll - prevScroll > 10 && headerRef.current) {
       headerRef.current.classList.add(`${s['header__appear']}`);
-    }else if(prevScroll - currentScroll > 10 && headerRef.current){
+    } else if (prevScroll - currentScroll > 10 && headerRef.current) {
       headerRef.current.classList.remove(`${s['header__appear']}`);
     }
     prevScroll = currentScroll;
@@ -21,9 +21,18 @@ export const Header = () => {
 
   return (
     <div className={s.header} ref={headerRef}>
-      <Link to="/" className={`${s['header-link']}`}>
+      <Link to="/" className={`${s['header-logo']}`}>
         <img src={logo} alt="logo" />
       </Link>
+
+      <div className={`${s['header-links']}`}>
+        <HeaderLink
+          address="../about"
+        >about</HeaderLink>
+        <HeaderLink
+          address="../contacts"
+        >contacts</HeaderLink>
+      </div>
     </div>
   )
 }

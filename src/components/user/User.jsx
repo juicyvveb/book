@@ -2,6 +2,7 @@ import React from "react";
 import fetch from "../../api/fetch";
 import { useLoaderData, Form, NavLink, Outlet } from "react-router-dom";
 import s from './User.module.scss';
+import { Link as InfoLink } from '../links/Link';
 
 const url = 'https://jsonplaceholder.typicode.com/users';
 
@@ -16,26 +17,28 @@ export default () => {
 
   return (
     <div className={s.user}>
-      <h1>{user.name}_{user.id}</h1>
-      <Form method="post" action="remove" style={{ float: 'right' }}>
-        <button> remove </button>
-      </Form>
-      <ul>
+      <h1 className={`${s[`user-name`]}`}>
+        {user.name}_{user.id}
+      </h1>
+      <div className={`${s[`user-avatar`]}`}>
+        <img src="" alt="avatar" />
+      </div>
+      <div className={`${s[`user-remove`]}`}>
+        <Form method="post" action="remove" style={{ float: 'right' }}>
+          <button> remove </button>
+        </Form>
+      </div>
+
+      <ul className={`${s[`user-infoList`]}`}>
         {
           types.map(type => (
-            <li key={type}>
-              <NavLink
-                to={`/users/${user.id}/${type}`}
-                className={({ isActive, isPending }) =>
-                  isActive
-                    ? "active"
-                    : isPending
-                      ? "pending"
-                      : ""
-                }
+            <li key={type} className={`${s[`user-infoList--item`]}`}>
+              <InfoLink
+                address={`/users/${user.id}/${type}`}
+                className={`${s['user-link']}`}
               >
                 {type}
-              </NavLink>
+              </InfoLink>
             </li>
           ))
         }
