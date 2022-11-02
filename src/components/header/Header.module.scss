@@ -1,0 +1,52 @@
+@import '../../style/main.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $bgSidebar;
+  height: 5%;
+  width: 100%;
+  padding: 2% 3%;
+  display: flex;
+  transition: all .3s ease-in-out;
+  justify-content: space-between;
+  &-logo {
+    width: 10%;
+    aspect-ratio: 1 /1;
+    display: flex;
+    padding: 0;
+    transition: all .1s ease-in-out;
+    flex-grow: 2;
+    &:hover {
+      padding: 0.3%;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &-links {
+    display: flex;
+    align-items: center;
+    flex-grow: 3;
+    justify-content: flex-end;
+    a {
+      width: auto;
+      text-align: right;
+      margin-right: 5%;
+      &:before {
+        content: none;
+      }
+    }
+  }
+  &__appear {
+    transform: translateY(-100%);
+  }
+}
+
+@media (min-width: $desktop) {
+  .header {
+    height: 7%;
+    padding: 1% 18%;
+  }
+}
