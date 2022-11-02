@@ -1,0 +1,33 @@
+@import '../../style/main.scss';
+
+.link {
+  width: 100%;
+  display: block;
+  color: $linkColor;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  &:hover{
+    color: $pendingLink;
+   }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6%;
+    aspect-ratio: 1/1;
+    background: linear-gradient(to top right, $bgSidebar 50%, $linkColor 50%);
+  }
+
+  &__active {
+    color: $activeLink;
+    font-weight: bold;
+    &:before {
+      background: linear-gradient(to top right, $bgSidebar 50%, $activeLink 50%);
+    }
+  }
+
+  &__pending {
+    color: $pendingLink;
+  }
+}
