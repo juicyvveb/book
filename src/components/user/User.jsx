@@ -35,7 +35,7 @@ export default () => {
             <li key={type} className={`${s[`user-infoList--item`]}`}>
               <InfoLink
                 address={`/users/${user.id}/${type}`}
-                className={`${s['user-link']}`}
+                className={`user-link`}
               >
                 {type}
               </InfoLink>
