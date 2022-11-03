@@ -12,9 +12,7 @@
   transition: all .3s ease-in-out;
   justify-content: space-between;
   &-logo {
-
     width: auto;
-
     aspect-ratio: 1 /1;
     display: flex;
     padding: 0;
@@ -45,7 +43,6 @@
     transform: translateY(-100%);
   }
 }
-
 
 @media (min-width: $desktop) {
   .header {
