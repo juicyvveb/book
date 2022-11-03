@@ -4,6 +4,7 @@ import fetch from "../api/fetch";
 import { Sidebar } from "../components/sidebar/Sidebar";
 import { Loader } from "../components/loader/Loader";
 import { Header } from "../components/header/Header";
+import { Footer } from "../components/footer/Footer";
 export async function loader({ }) {
   const url = 'https://jsonplaceholder.typicode.com/users';
   return await fetch(url)
@@ -30,6 +31,7 @@ export const Root = () => {
             ? <Loader />
             : null
         }
+        <Footer/>
       </div>
     </>
   )

@@ -1,0 +1,80 @@
+@import '../../style/main.scss';
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $bgSidebar;
+    width: 100%;
+    padding: 2% 3%;
+    transition: all .3s ease-in-out;
+    justify-content: space-between;
+    display: flex;
+
+    &-copyRight {
+        color: $activeLink;
+        line-height: 1;
+        font-size: 12px;
+    }
+
+    &-social {
+        max-width: 70%;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+                flex-basis: 10%;
+                aspect-ratio: 1/1;
+                margin-right: 6%;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    padding: 0;
+                    display: flex;
+                    transition: all .2s ease-in-out;
+
+                    &:hover {
+                        padding: 5%;
+                    }
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $laptop) {
+    .footer {
+        padding: 1% 18%;
+
+        &-social {
+            ul {
+                li {
+                    flex-basis: 7%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .footer {
+        padding: 1% 18%;
+        &-social {
+            ul {
+                li {
+                    flex-basis: 5%;
+                }
+            }
+        }
+    }
+}
