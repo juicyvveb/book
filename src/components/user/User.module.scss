@@ -5,7 +5,9 @@
   padding-top: 10%;
   padding-bottom: 10%;
 
+
   // background: $activeLink;
+
   &-name {
     color: $bgSidebar;
   }
@@ -22,10 +24,5 @@
         &:before {
           content: none;
         }
-      }
-    }
-  }
-  &-link{
-    color: green;
   }
 }
