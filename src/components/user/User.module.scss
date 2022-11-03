@@ -5,6 +5,9 @@
   padding-top: 10%;
   padding-bottom: 10%;
 
+
+  // background: $activeLink;
+
   &-name {
     color: $bgSidebar;
   }
@@ -24,11 +27,4 @@
       }
     }
   }
-  &-link{
-    color: red;
-    &.active{
-      color: black;
-    }
-  }
-  
 }

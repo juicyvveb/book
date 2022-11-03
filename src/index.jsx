@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import { Root, loader as listLoader } from './routes/Root';
 import ErrorPage from "./error-page";
-import Index from './routes/Index';
+import { Default } from './routes/default/Default';
 import User, { loader as loadUser } from './components/user/User';
 import Block, { loader as dataBlockLoader } from './components/infoBlock/InfoBlock';
 import { removeUser } from './components/user-list/UsersList';
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     loader: listLoader,
     children: [
-      { index: true, element: <Index /> },
+      { index: true, element: <Default/> },
       {
         path: 'users/:userId',
         element: <User />,
