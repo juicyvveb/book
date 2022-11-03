@@ -4,8 +4,9 @@
   display: flex;
   #detail {
     flex-grow: 3;
-    background-color: $blue;
+    background-color: $activeLink;
     padding: 3%;
+    padding-top: 10%;
     color: rgb(248, 217, 113);
   }
 }
