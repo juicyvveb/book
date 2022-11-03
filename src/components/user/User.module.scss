@@ -17,15 +17,12 @@
     &--item {
       margin-right: 5%;
 
-      a{
+      a {
         &:before {
           content: none;
         }
-        
       }
     }
-
-   
   }
   &-link{
     color: red;
