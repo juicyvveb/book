@@ -1,0 +1,26 @@
+@import '../../style/main.scss';
+
+.default {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: $bgSidebar;
+    text-align: center;
+    line-height: 1;
+  }
+  p{
+    color: black;
+  }
+  &-img{
+    margin-top: 10%;
+    width: 50%;
+    img {
+      max-width: 100%;
+
+    }
+  }
+}
