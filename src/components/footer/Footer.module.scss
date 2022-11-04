@@ -1,20 +1,20 @@
 @import '../../style/main.scss';
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     background-color: $bgSidebar;
     width: 100%;
-    padding: 2% 3%;
     transition: all .3s ease-in-out;
     justify-content: space-between;
     display: flex;
-
+    align-items: center;
     &-copyRight {
         color: $activeLink;
         line-height: 1;
         font-size: 12px;
+        a{
+            color: white;
+            font-style: italic;
+        }
     }
 
     &-social {
@@ -23,9 +23,9 @@
         ul {
             display: flex;
             justify-content: flex-end;
-
+            align-items: center;
             li {
-                flex-basis: 10%;
+                width: 8%;
                 aspect-ratio: 1/1;
                 margin-right: 6%;
 
@@ -54,12 +54,10 @@
 
 @media (min-width: $laptop) {
     .footer {
-        padding: 1% 18%;
-
         &-social {
             ul {
                 li {
-                    flex-basis: 7%;
+                    width: 5%;
                 }
             }
         }
@@ -68,11 +66,11 @@
 
 @media (min-width: $desktop) {
     .footer {
-        padding: 1% 18%;
         &-social {
             ul {
                 li {
-                    flex-basis: 5%;
+                   width: 4%;
+                   margin-right: 2%;
                 }
             }
         }

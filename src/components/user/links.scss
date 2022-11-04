@@ -1,6 +1,6 @@
 .user-link{
     &.active{
         font-weight: bold;
-        color: rgb(46, 43, 155);
+        color: $bgSidebar !important;
     }
 }

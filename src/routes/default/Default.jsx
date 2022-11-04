@@ -39,7 +39,7 @@ export const Default = () => {
 
 
   return (
-    <div className={s.default}>
+    <div className={s.default + ' wrap'}>
       {
         prompt
           ? <Popup

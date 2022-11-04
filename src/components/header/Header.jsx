@@ -20,7 +20,7 @@ export const Header = () => {
   })
 
   return (
-    <div className={s.header} ref={headerRef}>
+    <div className={s.header + ' wrap'} ref={headerRef}>
       <Link to="/" className={`${s['header-logo']}`}>
         <img src={logo} alt="logo" />
       </Link>
