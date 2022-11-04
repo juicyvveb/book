@@ -12,20 +12,11 @@
   transition: all .3s ease-in-out;
   justify-content: space-between;
   &-logo {
-<<<<<<< HEAD
-    width: 10%;
-=======
     width: auto;
->>>>>>> a79d42f8655aa9457ae8428f9d5bfabd5e1cebdb
     aspect-ratio: 1 /1;
     display: flex;
     padding: 0;
     transition: all .1s ease-in-out;
-<<<<<<< HEAD
-    flex-grow: 2;
-=======
-
->>>>>>> a79d42f8655aa9457ae8428f9d5bfabd5e1cebdb
     &:hover {
       padding: 0.3%;
     }
@@ -52,9 +43,15 @@
   }
 }
 
+@media (min-width: $laptop) {
+  .header {
+    min-height: 5%;
+    padding: 1% 18%;
+  }
+}
 @media (min-width: $desktop) {
   .header {
-    height: 7%;
-    padding: 1% 18%;
+    min-height: 5%;
+    padding: 0.5% 18%;
   }
 }
