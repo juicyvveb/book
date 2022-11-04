@@ -7,7 +7,7 @@ import { appear } from "../../js/gsap/popup";
 
 export const Default = () => {
   let show_modal = initialize_Modal();
-  const [prompt, setPrompt] = useState(true)
+  const [prompt, setPrompt] = useState(false)
   const [timer, setTimer] = useState(8)
 
   useEffect(() => {

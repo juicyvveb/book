@@ -9,6 +9,7 @@ export const Link = ({address, children, onClick, className}) => {
     <NavLink
       to={address}
       onClick={onClick}
+<<<<<<< HEAD
       className={!className ? ({ isActive, isPending }) =>
         isActive
           ? `${s.link} ${s['link__active']}`
@@ -16,6 +17,14 @@ export const Link = ({address, children, onClick, className}) => {
             ? `${s.link} ${s['link__pending']}`
             : `${s.link}`
           : className
+=======
+      className={({ isActive, isPending }) =>
+        isActive
+          ? `${s.link} ${s['link__active']} active ${className}`
+          : isPending
+            ? `${s.link} ${s['link__pending']} pending ${className}`
+            : `${s.link} ${className}`
+>>>>>>> a79d42f8655aa9457ae8428f9d5bfabd5e1cebdb
       }
     >{children}
     </NavLink>

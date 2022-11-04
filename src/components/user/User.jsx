@@ -16,6 +16,7 @@ export default () => {
   const user = useLoaderData();
 
   return (
+
     <div className={s.user}>
       <h1 className={`${s[`user-name`]}`}>
         {user.name}_{user.id}
@@ -35,7 +36,11 @@ export default () => {
             <li key={type} className={`${s[`user-infoList--item`]}`}>
               <InfoLink
                 address={`/users/${user.id}/${type}`}
+<<<<<<< HEAD
                 className={`${s['user-link']}`}
+=======
+                className={`user-link`}
+>>>>>>> a79d42f8655aa9457ae8428f9d5bfabd5e1cebdb
               >
                 {type}
               </InfoLink>
@@ -46,6 +51,6 @@ export default () => {
       <div className="block">
         <Outlet />
       </div>
-    </div>
+    </div >
   )
 }

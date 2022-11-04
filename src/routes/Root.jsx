@@ -4,6 +4,11 @@ import fetch from "../api/fetch";
 import { Sidebar } from "../components/sidebar/Sidebar";
 import { Loader } from "../components/loader/Loader";
 import { Header } from "../components/header/Header";
+<<<<<<< HEAD
+=======
+
+import { Footer } from "../components/footer/Footer";
+>>>>>>> a79d42f8655aa9457ae8428f9d5bfabd5e1cebdb
 
 export async function loader({ }) {
   const url = 'https://jsonplaceholder.typicode.com/users';
@@ -33,6 +38,7 @@ export const Root = () => {
             ? <Loader />
             : null
         }
+        <Footer/>
       </div>
     </>
   )
