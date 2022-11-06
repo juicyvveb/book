@@ -17,7 +17,7 @@ export default () => {
 
   return (
 
-    <div className={s.user}>
+    <div className={s.user+ ' wrap'}>
       <h1 className={`${s[`user-name`]}`}>
         {user.name}_{user.id}
       </h1>

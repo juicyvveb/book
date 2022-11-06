@@ -2,7 +2,8 @@
 @import './vars.scss';
 @import '../components/photo-album/PhotoAlbum.scss';
 @import '../components/sidebar/appear_animation.scss';
-@import '../components/links/links.scss';
+@import '../components/user/links.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -38,3 +39,20 @@ button:hover {
   box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
 }
 
+//
+//
+//padding wrapper
+  .wrap {
+    padding: 2% 3%;
+  }
+  
+  @media (min-width: $laptop) {
+    .wrap {
+      padding: 2% 16%;
+    }
+  }
+  @media (min-width: $desktop) {
+    .wrap {
+      padding: 1% 20%;
+    }
+  }

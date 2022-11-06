@@ -13,6 +13,7 @@ export default ({ list, closeBurger, children }) => {
   const [users, setUsers] = useState(list)
 
   useEffect(() => {
+    console.log('lldldld')
     if (data?.userId) {
       let id = +data.userId;
       let person = users.filter(person => person.id === id)[0];
@@ -42,17 +43,6 @@ export default ({ list, closeBurger, children }) => {
               address={`/users/${el.id}`}>
               {el.id}__{el.name}
             </SidebarLink>
-            {/* <NavLink
-              onClick={close}
-              to={`/users/${el.id}`}
-              className={({ isActive, isPending }) =>
-                isActive
-                  ? `${s.link} ${s['link__active']}`
-                  : isPending
-                    ? `${s.link} ${s['link__pending']}`
-                    : `${s.link}`
-              }
-            >{el.id}__{el.name}</NavLink> */}
           </li>)}
       </ul>
       <>
