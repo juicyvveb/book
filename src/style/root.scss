@@ -3,6 +3,7 @@
 #root {
   display: flex;
   #detail {
+    min-height: 100vh;
     flex-grow: 3;
     background-color: $activeLink;
     padding-top: 10%;

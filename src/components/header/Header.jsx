@@ -11,10 +11,10 @@ export const Header = () => {
 
   document.addEventListener('scroll', () => {
     let currentScroll = window.pageYOffset;
-    if (currentScroll - prevScroll > 10 && headerRef.current) {
-      headerRef.current.classList.add(`${s['header__appear']}`);
-    } else if (prevScroll - currentScroll > 10 && headerRef.current) {
-      headerRef.current.classList.remove(`${s['header__appear']}`);
+    if (currentScroll - prevScroll > 2 && headerRef.current) {
+      headerRef?.current.classList.add(`${s['header__appear']}`);
+    } else if (prevScroll - currentScroll > 2 && headerRef.current) {
+      headerRef?.current.classList.remove(`${s['header__appear']}`);
     }
     prevScroll = currentScroll;
   })

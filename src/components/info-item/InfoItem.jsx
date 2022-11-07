@@ -13,14 +13,17 @@ export async function loader({ request, params }) {
 export default () => {
   const { data, type } = useLoaderData();
   const { title, id, body } = data;
-  console.log(data)
-  let className = `${s.item} ${s[`item--${type}`]}`;
+  let className = `${s.block} ${s[`block__${type}`]}`;
 
   return (
     <div className={className}>
-      <h3 className={s.title}>{title}  номер: {id}</h3>
+      <h3 className={s['block-title']}>{title}</h3>
+      <p>
+        номер: {id}
+      </p>
+
       {/* body */}
-      {body && <p>{body}</p>}
+      {body && <p className={s['block-content']}>{body}</p>}
 
 
       {/* link for album */}
@@ -29,7 +32,7 @@ export default () => {
       }
 
       {
-        type === 'todos' && <Indicator completed={data.completed}/>
+        type === 'todos' && <Indicator completed={data.completed} className={s['block-indicator']}/>
       }
     </div>
   )
