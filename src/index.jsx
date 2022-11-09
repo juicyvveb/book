@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       { index: true, element: <Default/> },
       {
         path: 'users/:userId',
-        element: <User />,
+        element: <User/>,
         loader: loadUser,
         errorElement: <ErrorPage/>,
         children: [
@@ -58,9 +58,8 @@ const router = createBrowserRouter([
         element: <h1>removing</h1>,
         action: removeUser,
       },
-      
     ]
-  }
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

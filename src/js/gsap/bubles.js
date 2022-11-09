@@ -1,11 +1,16 @@
 import gsap from "gsap";
 
-export const bubbles_move = () => {
+export const bubbles_move = (count) => {
+    console.log('bubbles move')
+    if(count){
+        console.log(count)
+        return
+    }
+    console.log('working')
     const colors = ['rgb(0, 217, 255)', 'rgb(51, 44, 44)', 'rgb(143, 250, 110)', 'black'];
     let counter = 0;
-
     const t1 = gsap.timeline({
-        repeat: -1,
+        repeat: count || -1,
         onRepeat: changeColor,
         onRepeatParams: ['backgroundColor']
     });
@@ -16,7 +21,6 @@ export const bubbles_move = () => {
             ease: "bounce.out",
             stagger: 0.1,
             opacity: 1,
-            rotation: random(30, 360),
         },)
 
 
@@ -28,9 +32,5 @@ export const bubbles_move = () => {
             counter++;
 
         }
-    }
-
-    function random(x, y) {
-        return Math.random(x, y)
     }
 }

@@ -2,12 +2,25 @@
 
 #root {
   display: flex;
+
   #detail {
     min-height: 100vh;
     flex-grow: 3;
     background-color: $activeLink;
     padding-top: 10%;
-    color: rgb(248, 217, 113);
     position: relative;
+
+    #error-page{
+      background: rgb(154, 154, 248);
+      min-height: auto !important;
+    }
+  }
+
+  #error-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }

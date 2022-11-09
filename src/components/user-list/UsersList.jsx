@@ -13,7 +13,6 @@ export default ({ list, closeBurger, children }) => {
   const [users, setUsers] = useState(list)
 
   useEffect(() => {
-    console.log('lldldld')
     if (data?.userId) {
       let id = +data.userId;
       let person = users.filter(person => person.id === id)[0];
