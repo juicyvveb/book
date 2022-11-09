@@ -9,7 +9,8 @@ import {
 import { Root, loader as listLoader } from './routes/Root';
 import ErrorPage from "./error-page";
 import { Default } from './routes/default/Default';
-import User, { loader as loadUser } from './components/user/User';
+import User, { loader as loadUser} from './components/user/User';
+import { Index as UserIndex } from './components/user/index/Index';
 import Block, { loader as dataBlockLoader } from './components/infoBlock/InfoBlock';
 import { removeUser } from './components/user-list/UsersList';
 import InfoItem, {loader as InfoItemLoader} from './components/info-item/InfoItem';
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         loader: loadUser,
         errorElement: <ErrorPage/>,
         children: [
-          { index: true, element: <p>здесь будет отображаться раздел</p> },
+          { index: true, element: <UserIndex/> },
           ...['albums', 'posts', 'todos'].map(el => {
             return {
               path: `/users/:userId/:type`,

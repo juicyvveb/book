@@ -3,7 +3,7 @@ import fetch from "../../api/fetch";
 import { useLoaderData, Form, NavLink, Outlet } from "react-router-dom";
 import s from './User.module.scss';
 import { Link as InfoLink } from '../links/Link';
-
+import avatar from '../../assets/img/user.png';
 const url = 'https://jsonplaceholder.typicode.com/users';
 
 export async function loader({ params }) {
@@ -18,15 +18,20 @@ export default () => {
   return (
 
     <div className={s.user+ ' wrap'}>
+
+      <div className={s['user-container1']}>
       <h1 className={`${s[`user-name`]}`}>
-        {user.name}_{user.id}
+        {user.name}
       </h1>
       <div className={`${s[`user-avatar`]}`}>
-        <img src="" alt="avatar" />
+        <img src={avatar} alt="avatar" />
       </div>
+      <p className={s['user-id']}>
+        id: {user.id}
+      </p>
       <div className={`${s[`user-remove`]}`}>
         <Form method="post" action="remove" style={{ float: 'right' }}>
-          <button> remove </button>
+          <button> </button>
         </Form>
       </div>
 
@@ -44,7 +49,8 @@ export default () => {
           ))
         }
       </ul>
-      <div className="block">
+      </div>
+      <div className={s['user-block'] +' ' + s['user-container']}>
         <Outlet />
       </div>
     </div >

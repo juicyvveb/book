@@ -21,20 +21,30 @@ function Block() {
     setType(loaded.type)
   }, [loaded])
 
+  const isTodo = type === 'todos';
   return (
     <div className={s.block}>
-      <h1>{type}</h1>
-      <ul className={s.block}>
+      <h1 className={s['block-title']}>{type}:</h1>
+      <ul className={`${s['block-list']} ${isTodo ? s['block-list__todos'] : null}`}>
         {
-          data.map(el => (
+          data.map((el, i) => (
             <li
               key={el.id}
-              >
-              <Link to={`${el.id}`} >
-                подробнее
-              </Link>
-              {el.title}
-              {el.completed !== undefined && <Indicator completed={el.completed}/>}
+              className={s['block-item']}
+            >
+              <span>{i + 1}</span>
+              <div>
+                {isTodo && <Indicator
+                  className={s['block-indicator']}
+                  completed={el.completed} />}
+                <h5>
+                  {el.title.replace(/^./, (el) => el.toUpperCase())}
+                </h5>
+                <Link to={`${el.id}`} >
+                  подробнее...
+                </Link>
+              </div>
+
             </li>
           ))
         }

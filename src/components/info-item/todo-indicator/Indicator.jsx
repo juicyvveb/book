@@ -1,15 +1,15 @@
 import React from "react";
 import s from './Indicator.module.scss';
 
-export default ({completed}) => {
+export default ({completed, className}) => {
   
   const styleClass = function () {
     return completed ? 'completed' : 'uncompleted'
   }
-  let className = `${s.indicator} ${s[`indicator__${styleClass()}`]}`
+  let classes = `${s.indicator} ${s[`indicator__${styleClass()}`]} ${className}`
 
   return (
-    <div className={className}>
+    <div className={classes}>
       
     </div>
   )

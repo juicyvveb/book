@@ -19,7 +19,7 @@ export const Footer = () => {
         <div className={s.footer + ' wrap'}>
             <div className={`${s['footer-copyRight']}`}>
                 <p>
-                    Икоки взяты из сайта: <a href="https://www.flaticon.com/">www.flaticon.com</a>
+                    Иконки взяты из сайта: <a href="https://www.flaticon.com/">www.flaticon.com</a>
                 </p>
             </div>
             <div className={`${s['footer-social']}`}>

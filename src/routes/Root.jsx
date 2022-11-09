@@ -20,7 +20,7 @@ export const Root = () => {
 
   useEffect(() => {
     setList(loadedList)
-  }, [navigation])
+  }, [])
 
 
   return (
