@@ -2,7 +2,19 @@
 
 #root {
   display: flex;
-
+  .popup{
+    z-index: 100;
+    &__remove{
+      background: rgb(177, 173, 173);
+      border: 2px solid greenyellow;
+      button{
+        display: none;
+      }
+      &:after{
+        content: none;
+      }
+    }
+  }
   #detail {
     min-height: 100vh;
     flex-grow: 3;

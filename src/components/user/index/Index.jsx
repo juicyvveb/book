@@ -8,7 +8,7 @@ export const Index = () => {
             <h4>
                 Здесь будет отображаться раздел, которы вы выберете...
             </h4>
-            <Bubbles/>
+            <Bubbles className={s['index-bubbles']}/>
         </div>
     )
 }

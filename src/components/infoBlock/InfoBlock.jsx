@@ -44,7 +44,6 @@ function Block() {
                   подробнее...
                 </Link>
               </div>
-
             </li>
           ))
         }

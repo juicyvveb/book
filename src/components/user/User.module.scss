@@ -7,14 +7,21 @@
   align-items: center;
   margin-top: auto;
   height: 100%;
-  &-container1{
+
+  &-block {
+    width: 100%;
+  }
+
+  &-container1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   &-name {
     color: $bgSidebar;
+    text-align: center;
   }
 
   &-id {
@@ -36,6 +43,11 @@
     display: flex;
     justify-content: center;
     margin-top: 5%;
+
+    &__desktop {
+      display: none;
+    }
+
     &--item {
       margin-right: 5%;
 
@@ -52,9 +64,9 @@
     aspect-ratio: 1/1;
 
     form {
-      width: 100%;
-      height: 100%;
       display: flex;
+      justify-content: center;
+      height: 100%;
       padding: 0;
       transition: all .1s ease-in-out;
 
@@ -79,21 +91,29 @@
     }
   }
 
-  
+
 }
 
 @media (min-width: $laptop) {
-  .user{
+  .user {
     flex-direction: row;
     align-items: flex-start;
-    &-container1{
+
+    &-container1 {
       flex-grow: 1;
       width: 35%;
-      
+
     }
-    &-block{
+
+    &-block {
       margin-left: 5%;
       flex-grow: 3;
+    }
+
+    &-infoList {
+      &__desktop {
+        display: flex;
+      }
     }
   }
 }
