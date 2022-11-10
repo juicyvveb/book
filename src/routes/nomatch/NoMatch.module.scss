@@ -1,0 +1,15 @@
+.block {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    height: 50%;
+    margin-bottom: 30%;
+    line-height: 1;
+    span{
+      font-size: 75px;
+    }
+  }
+}

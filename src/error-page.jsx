@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import { Bubbles } from "./components/bubles/Bubbles";
+import { Bubbles } from "./components/bubbles/Bubbles";
 
 
 export default function ErrorPage() {

@@ -15,7 +15,7 @@ import Block, { loader as dataBlockLoader } from './components/infoBlock/InfoBlo
 import { removeUser } from './components/user-list/UsersList';
 import InfoItem, {loader as InfoItemLoader} from './components/info-item/InfoItem';
 import PhotoAlbum, {loader as PhotoLoader} from './components/photo-album/PhotoAlbum';
-
+import { NoMatch } from './routes/nomatch/NoMatch';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +23,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     loader: listLoader,
     children: [
+      {path: "*", element: <NoMatch/>},
       { index: true, element: <Default/> },
       {
         path: 'users/:userId',

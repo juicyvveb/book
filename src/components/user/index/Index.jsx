@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import s from './Index.module.scss';
-import { Bubbles } from "../../bubles/Bubbles";
+import { Bubbles } from "../../bubbles/Bubbles";
 export const Index = () => {
 
     return (
