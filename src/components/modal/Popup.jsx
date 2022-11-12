@@ -1,20 +1,16 @@
 import React from "react";
 import s from './Popup.module.scss';
-export const Popup = ({ msg, children, close, className }) => {
-  return (
-    <div className={`${s.popup} ${className}`}>
-      <p>
+//переадресация рефов, потому что сам компонент рефы не принимает, а нужно бы для CSSTransition
+export const Popup = React.forwardRef(({msg, children, className, close}, ref) => (
+      <div ref={ref} className={`${s.popup} ${className}`}>
+      <h2>
         {msg}
-      </p>
+      </h2>
+      {children}
       <button
-        className={`${s[`popup-button`]}`}
         onClick={close}
       >
         <span></span>
       </button>
-      <p>
-        Окно само  исчезнет через: {children}
-      </p>
     </div>
-  )
-}
+))

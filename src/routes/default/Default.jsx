@@ -43,9 +43,11 @@ export const Default = () => {
       {
         prompt
           ? <Popup
-            className={'startPopup'}
+            className={`${s.hintPopup} startPopup`}
             close={() => { setPrompt(false) }}
-            msg={'Можете нажать на меню и выбрать пользователя'} children={timer} />
+            msg="Выберите пользователя и смотрите" children={timer}>
+              <p>Окно само исчезнет через {timer}</p>
+            </Popup>
           : null
       }
       <h2>

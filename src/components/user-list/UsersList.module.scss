@@ -1,8 +1,8 @@
 @import '../../style/main.scss';
 
 
-.title{
-  color:$activeLink;
+.title {
+  color: $activeLink;
 }
 
 .list {
@@ -10,8 +10,10 @@
   background-color: $bgSidebar;
   width: 50%;
   padding: 3%;
+
   ul {
     margin-top: 10%;
+
     li {
       width: 100%;
       padding-left: 10%;
@@ -28,6 +30,7 @@
   color: $linkColor;
   text-decoration: none;
   transition: all .3s ease-in-out;
+
   &:before {
     content: "";
     position: absolute;
@@ -41,6 +44,7 @@
   &__active {
     color: $activeLink;
     font-weight: bold;
+
     &:before {
       background: linear-gradient(to top right, $bgSidebar 50%, $activeLink 50%);
     }
@@ -51,7 +55,7 @@
   }
 }
 
-.burger{
+.burger {
   background-color: $bgSidebar;
 }
 
@@ -59,6 +63,7 @@
   .list {
     width: 20%;
     padding: 2%;
+
     ul {
       li {
         width: 100%;
@@ -69,9 +74,60 @@
       }
     }
   }
-  .link{
-    &:hover{
-     color: $pendingLink;
+
+  .link {
+    &:hover {
+      color: $pendingLink;
     }
+  }
+}
+
+
+//popup
+.removePopup {
+  background: white;
+  border: 8px solid rgb(38, 235, 51);
+  height: 50%;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  border-radius: 15px;
+  padding: 3%;
+  max-width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+  &-part {
+    width: 100%;
+    text-align: center;
+    flex-grow: 2;
+    &--img {
+      margin: 0 auto;
+      width: 50%;
+      height: 100%;
+      background-image: url('../../assets/img/complete.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  p {
+    display: none;
+  }
+
+  h2 {
+    text-align: center;
+    line-height: 1;
+    text-transform: capitalize;
+  }
+
+  button {
+    display: none;
+  }
+
+  &:after {
+    content: none;
   }
 }
