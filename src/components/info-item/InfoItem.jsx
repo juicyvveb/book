@@ -17,13 +17,11 @@ export default () => {
 
   return (
     <div className={className}>
-      <h3 className={s['block-title']}>{title}</h3>
-      <p>
-        номер: {id}
-      </p>
-
+      <h3 className={s['block-title']}>Название: {title}</h3>
+      
+      {!body ? <p className={s['block-content']}>Нет текста</p> : false}
       {/* body */}
-      {body && <p className={s['block-content']}>{body}</p>}
+      {body && <p className={s['block-content']}>Текст: {body}</p>}
 
 
       {/* link for album */}

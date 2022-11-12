@@ -1,4 +1,6 @@
 import { useRouteError } from "react-router-dom";
+import { Bubbles } from "./components/bubbles/Bubbles";
+
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -9,6 +11,7 @@ export default function ErrorPage() {
       <p>
         <i>!!!!!!! {error.statusText || error.message}</i>
       </p>
+      <Bubbles/>
     </div>
   );
 }
