@@ -14,6 +14,12 @@ export const Footer = () => {
         gh,
         link
     }
+    const socials = {
+        tg: 'https://t.me/nazzarra',
+        inst: 'https://instagram.com/el_nazira_',
+        gh: 'https://github.com/juicyvveb',
+        link: 'https://www.linkedin.com/in/nazar-zenkov-851b15248/'
+    }
 
     return (
         <div className={s.footer + ' wrap'}>
@@ -27,7 +33,7 @@ export const Footer = () => {
                     {
                         social.split(' ').map((el, i) => (
                             <li key={i}>
-                                <a href="">
+                                <a href={socials[el]}>
                                     <img src={imgs[`${el}`]} alt={el} />
                                 </a>
                             </li>
