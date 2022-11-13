@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/juicyvveb/users-react/static/css/main.5c8574fe.css",
-    "main.js": "/juicyvveb/users-react/static/js/main.8914c776.js",
-    "static/media/inst.png": "/juicyvveb/users-react/static/media/inst.e719d8b29f452a16302d.png",
-    "static/media/complete.png": "/juicyvveb/users-react/static/media/complete.94fd80ee8640c923f98e.png",
-    "static/media/react.png": "/juicyvveb/users-react/static/media/react.588ce830e2ea8ca431cd.png",
-    "static/media/kick.png": "/juicyvveb/users-react/static/media/kick.4b0093845d12423daddd.png",
-    "static/media/tg.png": "/juicyvveb/users-react/static/media/tg.e8540dc14b381676ad9c.png",
-    "static/media/user.png": "/juicyvveb/users-react/static/media/user.89aaeb263a46bd353262.png",
-    "static/media/gh.png": "/juicyvveb/users-react/static/media/gh.a855c3975c028d8069f5.png",
-    "static/media/link.png": "/juicyvveb/users-react/static/media/link.f249b38224ca41a0b909.png",
-    "index.html": "/juicyvveb/users-react/index.html",
-    "main.5c8574fe.css.map": "/juicyvveb/users-react/static/css/main.5c8574fe.css.map",
-    "main.8914c776.js.map": "/juicyvveb/users-react/static/js/main.8914c776.js.map"
+    "main.css": "/users-react/static/css/main.68129b63.css",
+    "main.js": "/users-react/static/js/main.99a1bedc.js",
+    "static/media/inst.png": "/users-react/static/media/inst.e719d8b29f452a16302d.png",
+    "static/media/complete.png": "/users-react/static/media/complete.94fd80ee8640c923f98e.png",
+    "static/media/react.png": "/users-react/static/media/react.588ce830e2ea8ca431cd.png",
+    "static/media/kick.png": "/users-react/static/media/kick.4b0093845d12423daddd.png",
+    "static/media/tg.png": "/users-react/static/media/tg.e8540dc14b381676ad9c.png",
+    "static/media/user.png": "/users-react/static/media/user.89aaeb263a46bd353262.png",
+    "static/media/gh.png": "/users-react/static/media/gh.a855c3975c028d8069f5.png",
+    "static/media/link.png": "/users-react/static/media/link.f249b38224ca41a0b909.png",
+    "index.html": "/users-react/index.html",
+    "main.68129b63.css.map": "/users-react/static/css/main.68129b63.css.map",
+    "main.99a1bedc.js.map": "/users-react/static/js/main.99a1bedc.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c8574fe.css",
-    "static/js/main.8914c776.js"
+    "static/css/main.68129b63.css",
+    "static/js/main.99a1bedc.js"
   ]
 }
