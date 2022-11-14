@@ -30,7 +30,7 @@ export default ({ list, closeBurger, children }) => {
       setUsers([...arr]);
       setSuccessDelete(true);
       setTimeout(() => {
-        navigate(("/"));
+        navigate(("/book"));
         setSuccessDelete(false);
       }, 900)
     }

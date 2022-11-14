@@ -18,7 +18,7 @@ import PhotoAlbum, {loader as PhotoLoader} from './components/photo-album/PhotoA
 import { NoMatch } from './routes/nomatch/NoMatch';
 const router = createBrowserRouter([
   {
-    path: "/book/",
+    path: "/book",
     element: <Root/>,
     errorElement: <ErrorPage/>,
     loader: listLoader,
