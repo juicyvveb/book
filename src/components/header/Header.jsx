@@ -21,16 +21,16 @@ export const Header = () => {
 
   return (
     <div className={s.header + ' wrap'} ref={headerRef}>
-      <Link to="/" className={`${s['header-logo']}`}>
+      <Link to="/book" className={`${s['header-logo']}`}>
         <img src={logo} alt="logo" />
       </Link>
 
       <div className={`${s['header-links']}`}>
         <HeaderLink
-          address="../about"
+          address="../book/about"
         >about</HeaderLink>
         <HeaderLink
-          address="../contacts"
+          address="../book/contacts"
         >contacts</HeaderLink>
       </div>
     </div>

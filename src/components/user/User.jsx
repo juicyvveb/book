@@ -43,7 +43,7 @@ useEffect(() => {
             types.map(type => (
               <li key={type} className={`${s[`user-infoList--item`]}`}>
                 <InfoLink
-                  address={`/users/${user.id}/${type}`}
+                  address={`/book/users/${user.id}/${type}`}
                   className={`user-link`}
                 >
                   {type}
@@ -59,7 +59,7 @@ useEffect(() => {
             types.map(type => (
               <li key={type} className={`${s[`user-infoList--item`]}`}>
                 <InfoLink
-                  address={`/users/${user.id}/${type}`}
+                  address={`/book/users/${user.id}/${type}`}
                   className={`user-link`}
                 >
                   {type}

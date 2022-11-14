@@ -18,7 +18,7 @@ import PhotoAlbum, {loader as PhotoLoader} from './components/photo-album/PhotoA
 import { NoMatch } from './routes/nomatch/NoMatch';
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/book/",
     element: <Root/>,
     errorElement: <ErrorPage/>,
     loader: listLoader,
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {path: "*", element: <NoMatch/>},
       { index: true, element: <Default/> },
       {
-        path: 'users/:userId',
+        path: '/book/users/:userId',
         element: <User/>,
         loader: loadUser,
         errorElement: <ErrorPage/>,
@@ -34,20 +34,20 @@ const router = createBrowserRouter([
           { index: true, element: <UserIndex/> },
           ...['albums', 'posts', 'todos'].map(el => {
             return {
-              path: `/users/:userId/:type`,
+              path: `/book/users/:userId/:type`,
               element: <Block/>,
               loader: dataBlockLoader,
               errorElement: <ErrorPage/>,
             }
           }),
           {
-            path: '/users/:userId/:type/:itemId',
+            path: '/book/users/:userId/:type/:itemId',
             element: <InfoItem/>,
             loader: InfoItemLoader,
             errorElement: <p>ошибка</p>,
           },
           {
-            path: '/users/:userId/albums/:itemId/photos',
+            path: '/book/users/:userId/albums/:itemId/photos',
             element: <PhotoAlbum/>,
             loader: PhotoLoader,
             errorElement: <p>ошибка</p>,
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
         ]
       },
       {
-        path: 'users/:userId/remove',
+        path: '/book/users/:userId/remove',
         element: <h1>removing</h1>,
         action: removeUser,
       },

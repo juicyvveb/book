@@ -81,7 +81,7 @@ export default ({ list, closeBurger, children }) => {
           <li key={el.id} className={s.item}>
             <SidebarLink
               onClick={close}
-              address={`/users/${el.id}`}>
+              address={`/book/users/${el.id}`}>
               {el.id}__{el.name}
             </SidebarLink>
           </li>)}
