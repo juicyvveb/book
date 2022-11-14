@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     loader: listLoader,
     children: [
-      {path: "*", element: <NoMatch/>},
+      {path: "*", element: <NoMatch/>, errorElement: <ErrorPage/>},
       { index: true, element: <Default/> },
       {
         path: '/book/users/:userId',
